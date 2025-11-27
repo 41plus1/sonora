@@ -1,4 +1,9 @@
 package com.sonora.ui.slot;
 
-public class ArtistSlot {
+import com.sonora.model.person.Artist;
+
+public class ArtistSlot extends Slot {
+    public ArtistSlot(Artist info) {
+        super(info);
+    }
 }
