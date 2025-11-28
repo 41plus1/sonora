@@ -8,14 +8,12 @@ import java.util.List;
 public class User extends Person {
     private List<Playlist> playlists;
     private List<Artist> followedArtists;
-    private List<Creator> followedCreators;
     private List<Media> favoriteMedia;
 
-    public User(String name, String email, String password, String photo, List<Playlist> playlists, List<Artist> followedArtists, List<Creator> followedCreators, List<Media> favoriteMedia) {
+    public User(String name, String email, String password, String photo, List<Playlist> playlists, List<Artist> followedArtists, List<Media> favoriteMedia) {
         super(name, email, password, photo);
         this.playlists = playlists;
         this.followedArtists = followedArtists;
-        this.followedCreators = followedCreators;
         this.favoriteMedia = favoriteMedia;
     }
 
@@ -25,10 +23,6 @@ public class User extends Person {
 
     public List<Artist> getFollowedArtists() {
         return followedArtists;
-    }
-
-    public List<Creator> getFollowedCreators() {
-        return followedCreators;
     }
 
     public List<Media> getFavoriteMedia() {
