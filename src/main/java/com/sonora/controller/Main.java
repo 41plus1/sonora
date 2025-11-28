@@ -7,6 +7,7 @@ import com.sonora.ui.screen.Screen;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 public class Main extends Application {
@@ -15,8 +16,6 @@ public class Main extends Application {
     private PlayerBar playerBar;
     private Screen currentScreen;
 
-    public Main() {}
-
     @Override
     public void start(Stage stage) throws Exception {
         this.searchBar = new SearchBar();
@@ -24,7 +23,12 @@ public class Main extends Application {
         this.playerBar = new PlayerBar();
         this.currentScreen = new Screen();
 
-//        Parent root = FXMLLoader.load(getClass().getResource("Main.fmxl"));
+        Parent root = FXMLLoader.load(getClass().getResource("/Main.fxml"));
+
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.setTitle("Sonora");
+        stage.show();
     }
 
     public static void main(String[] args) {

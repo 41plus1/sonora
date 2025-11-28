@@ -1,4 +1,4 @@
-package com.sonora.ui.regions;
+package com.sonora.ui.region;
 
 import com.sonora.ui.slot.Slot;
 
