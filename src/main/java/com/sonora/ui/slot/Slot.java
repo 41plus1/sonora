@@ -1,13 +1,15 @@
 package com.sonora.ui.slot;
 
-public class Slot {
-    private Object info;
+public abstract class Slot <T> {
+    private T info;
 
-    public Slot(Object info) {
+    public Slot(T info) {
         this.info = info;
     }
 
-    public Object getInfo() {
+    public T getInfo() {
         return info;
     }
+
+    public abstract void initializeUI();
 }

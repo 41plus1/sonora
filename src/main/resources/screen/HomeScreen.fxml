@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.control.Label?>
+
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            prefWidth="600" prefHeight="400">
+
+    <children>
+        <Label fx:id="labelTitle" layoutX="20" layoutY="20" text="Home Screen"/>
+    </children>
+
+</AnchorPane>
