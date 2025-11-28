@@ -1,25 +1,26 @@
 package com.sonora.model.collection;
 
-import com.sonora.model.media.Music;
-import com.sonora.model.person.Artist;
-
+import java.util.ArrayList;
 import java.util.List;
 
 public class Album extends ContentCollection {
-    private List<Artist> artists;
-    private List<Music> tracks;
+    private List<Integer> artistIds;
 
-    public Album(String name, String description, String cover, List<Artist> artists, List<Music> tracks) {
-        super(name, description, cover);
-        this.artists = artists;
-        this.tracks = tracks;
+    public Album() {
+        super();
+        this.artistIds = new ArrayList<>();
     }
 
-    public List<Artist> getArtists() {
-        return artists;
+    public Album(int id, String name, String description, String cover, List<Integer> artistIds, List<Integer> musicIds) {
+        super(id, name, description, cover, musicIds);
+        this.artistIds = artistIds;
     }
 
-    public List<Music> getTracks() {
-        return tracks;
+    public List<Integer> getArtistIds() {
+        return artistIds;
+    }
+
+    public void setArtistIds(List<Integer> artistIds) {
+        this.artistIds = artistIds;
     }
 }

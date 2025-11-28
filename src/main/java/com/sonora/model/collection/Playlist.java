@@ -1,19 +1,26 @@
 package com.sonora.model.collection;
 
-
-import com.sonora.model.media.Music;
-
+import java.util.ArrayList;
 import java.util.List;
 
 public class Playlist extends ContentCollection {
-    private List<Music> musics;
+    private List<Integer> userIds;
 
-    public Playlist(String name, String description, String cover, List<Music> musics) {
-        super(name, description, cover);
-        this.musics = musics;
+    public Playlist() {
+        super();
+        this.userIds = new ArrayList<>();
     }
 
-    public List<Music> getMedia() {
-        return musics;
+    public Playlist(int id, String name, String description, String cover, List<Integer> userIds, List<Integer> musicIds) {
+        super(id, name, description, cover, musicIds);
+        this.userIds = userIds;
+    }
+
+    public List<Integer> getUserIds() {
+        return userIds;
+    }
+
+    public void setUserIds(List<Integer> userIds) {
+        this.userIds = userIds;
     }
 }

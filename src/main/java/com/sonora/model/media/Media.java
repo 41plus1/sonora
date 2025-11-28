@@ -10,8 +10,7 @@ public class Media {
     private String releaseDate;
     private String cover;
 
-    public Media() {
-    }
+    public Media() {}
 
     public Media(int id, String name, int duration, String releaseDate, String cover) {
         this.id = id;
@@ -57,6 +56,7 @@ public class Media {
             this.releaseDate = null;
         }
     }
+
 
     public String getCover() {
         return cover;

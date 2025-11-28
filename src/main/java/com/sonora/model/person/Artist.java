@@ -3,23 +3,38 @@ package com.sonora.model.person;
 import com.sonora.model.collection.Album;
 import com.sonora.model.collection.Single;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Artist extends Person {
-    private List<Album> albums;
-    private List<Single> singles;
+    private List<Integer> albumIds;
+    private List<Integer> singleIds;
 
-    public Artist(String name, String email, String password, String photo, List<Album> albums, List<Single> singles) {
-        super(name, email, password, photo);
-        this.albums = albums;
-        this.singles = singles;
+    public Artist() {
+        super();
+        this.albumIds = new ArrayList<>();
+        this.singleIds = new ArrayList<>();
     }
 
-    public List<Album> getAlbums() {
-        return albums;
+    public Artist(int id, String name, String email, String password, String photo, List<Integer> albumIds, List<Integer> singleIds) {
+        super(id, name, email, password, photo);
+        this.albumIds = albumIds;
+        this.singleIds = singleIds;
     }
 
-    public List<Single> getSingles() {
-        return singles;
+    public List<Integer> getAlbumIds() {
+        return albumIds;
+    }
+
+    public void setAlbumIds (List<Integer> albumIds) {
+        this.albumIds = albumIds;
+    }
+
+    public List<Integer> getSingleIds() {
+        return singleIds;
+    }
+
+    public void setSingleIds (List<Integer> singleIds) {
+        this.singleIds = singleIds;
     }
 }

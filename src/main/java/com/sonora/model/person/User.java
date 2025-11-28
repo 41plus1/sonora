@@ -1,31 +1,48 @@
 package com.sonora.model.person;
 
-import com.sonora.model.collection.Playlist;
-import com.sonora.model.media.Media;
-
+import java.util.ArrayList;
 import java.util.List;
 
 public class User extends Person {
-    private List<Playlist> playlists;
-    private List<Artist> followedArtists;
-    private List<Media> favoriteMedia;
+    private List<Integer> playlistIds;
+    private List<Integer> followedArtistIds;
+    private List<Integer> favoriteMediaIds;
 
-    public User(String name, String email, String password, String photo, List<Playlist> playlists, List<Artist> followedArtists, List<Media> favoriteMedia) {
-        super(name, email, password, photo);
-        this.playlists = playlists;
-        this.followedArtists = followedArtists;
-        this.favoriteMedia = favoriteMedia;
+    public User() {
+        super();
+        this.playlistIds =  new ArrayList<>();
+        this.followedArtistIds =  new ArrayList<>();
+        this.favoriteMediaIds =  new ArrayList<>();
     }
 
-    public List<Playlist> getPlaylists() {
-        return playlists;
+    public User(int id, String name, String email, String password, String photo, List<Integer> playlistIds, List<Integer> followedArtistIds, List<Integer> favoriteMediaIds) {
+        super(id, name, email, password, photo);
+        this.playlistIds = playlistIds;
+        this.followedArtistIds = followedArtistIds;
+        this.favoriteMediaIds = favoriteMediaIds;
     }
 
-    public List<Artist> getFollowedArtists() {
-        return followedArtists;
+    public List<Integer> getPlaylistIds() {
+        return playlistIds;
     }
 
-    public List<Media> getFavoriteMedia() {
-        return favoriteMedia;
+    public void setPlaylistIds(List<Integer> playlistIds) {
+        this.playlistIds = playlistIds;
+    }
+
+    public List<Integer> getFollowedArtistIds() {
+        return followedArtistIds;
+    }
+
+    public void setFollowedArtistIds(List<Integer> followedArtistIds) {
+        this.followedArtistIds = followedArtistIds;
+    }
+
+    public List<Integer> getFavoriteMediaIds() {
+        return favoriteMediaIds;
+    }
+
+    public void getFavoriteMediaIds(List<Integer> favoriteMediaIds) {
+        this.favoriteMediaIds = favoriteMediaIds;
     }
 }

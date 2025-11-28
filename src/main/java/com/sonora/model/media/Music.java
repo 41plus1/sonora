@@ -1,6 +1,5 @@
 package com.sonora.model.media;
 
-import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -22,7 +21,7 @@ public class Music extends Media {
     }
 
     public List<Integer> getArtistIds() {
-        return this.artistIds;
+        return artistIds;
     }
 
     public void setArtistIds(List<Integer> artistIds) {
@@ -30,7 +29,7 @@ public class Music extends Media {
     }
 
     public int getCollectionId() {
-        return this.collectionId;
+        return collectionId;
     }
 
     public void setCollectionId(int collectionId) {
@@ -38,7 +37,7 @@ public class Music extends Media {
     }
 
     public CollectionType getCollectionType() {
-        return this.collectionType;
+        return collectionType;
     }
 
     public void setCollectionType(CollectionType collectionType) {
