@@ -6,8 +6,7 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-
-<AnchorPane id="SongSlot" prefHeight="0.0" prefWidth="204.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.sonora.ui.slot.SongSlot">
+<AnchorPane id="SongSlot" prefHeight="0.0" prefWidth="204.0" stylesheets="@../style.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.sonora.ui.slot.SongSlot">
    <children>
       <HBox prefHeight="83.0" prefWidth="318.0" AnchorPane.leftAnchor="0.0">
          <children>

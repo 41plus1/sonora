@@ -10,13 +10,13 @@
         <HBox AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
 
             <children>
-                <VBox prefHeight="366.0" prefWidth="174.0" styleClass="outline-box" />
+                <VBox fx:id="SideBarBox" prefHeight="366.0" prefWidth="174.0" styleClass="outline-box" />
 
                 <VBox prefHeight="366.0" prefWidth="461.0" styleClass="outline-box">
                     <children>
-                        <HBox prefHeight="106.0" prefWidth="461.0" />
+                        <HBox fx:id="SearchBarBox" prefHeight="106.0" prefWidth="461.0" />
                         <HBox fx:id="ScreenBox" prefHeight="224.0" prefWidth="461.0" />
-                        <HBox fx:id="PlayerBox" prefHeight="43.0" prefWidth="461.0" />
+                        <HBox fx:id="PlayerBarBox" prefHeight="43.0" prefWidth="461.0" />
                     </children>
                 </VBox>
             </children>

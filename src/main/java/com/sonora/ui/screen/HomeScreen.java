@@ -8,7 +8,7 @@ public class HomeScreen extends Screen {
     private Label labelTitle;
 
     public HomeScreen() {
-        super("/screen/HomeScreen.fxml");
+        super("/ui/screen/HomeScreen.fxml");
     }
 
     @FXML

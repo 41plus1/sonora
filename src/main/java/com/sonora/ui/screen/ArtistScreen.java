@@ -8,7 +8,7 @@ public class ArtistScreen extends Screen {
     private Label labelTitle;
 
     public ArtistScreen() {
-        super("/screen/ArtistScreen.fxml");
+        super("/ui/screen/ArtistScreen.fxml");
     }
 
     @FXML

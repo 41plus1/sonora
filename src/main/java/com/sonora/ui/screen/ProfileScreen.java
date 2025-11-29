@@ -8,7 +8,7 @@ public class ProfileScreen extends Screen {
     private Label labelTitle;
 
     public ProfileScreen() {
-        super("/screen/ProfileScreen.fxml");
+        super("/ui/screen/ProfileScreen.fxml");
     }
 
     @FXML

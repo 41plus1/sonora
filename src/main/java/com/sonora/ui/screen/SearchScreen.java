@@ -3,16 +3,16 @@ package com.sonora.ui.screen;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 
-public class AlbumScreen extends Screen {
+public class SearchScreen extends Screen {
     @FXML
     private Label labelTitle;
 
-    public AlbumScreen() {
-        super("/ui/screen/AlbumScreen.fxml");
+    public SearchScreen() {
+        super("/ui/screen/SearchScreen.fxml");
     }
 
     @FXML
     public void initialize() {
-        labelTitle.setText("Album Screen");
+        labelTitle.setText("Search Screen");
     }
 }
