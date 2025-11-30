@@ -8,28 +8,28 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class SongsRegion extends Region<SongSlot> {
+    private List<SongSlot> slots;
+
     @FXML
     private VBox songsBox;
 
     public SongsRegion() {
         super("/ui/region/SongsRegion.fxml");
-        this.setSlots();
     }
 
     @FXML
-    public void initializeUI() {
-
-
+    public void initialize() {
+        this.setSlots();
     }
 
     @Override
     public void setSlots() {
-        List<SongSlot> slots = new ArrayList<SongSlot>();
+        this.slots = new ArrayList<SongSlot>();
 
         for (int i = 0; i < 10; i++) {
             SongSlot songSlot = new SongSlot();
 
-            slots.add(songSlot);
+            this.slots.add(songSlot);
             songsBox.getChildren().add(songSlot.getRoot());
         }
     }
