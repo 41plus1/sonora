@@ -13,11 +13,6 @@ public class AlbumsRegion extends Region<AlbumSlot> {
         this.setSlots();
     }
 
-    @FXML
-    public void initializeUI() {
-
-    }
-
     @Override
     public void setSlots() {
 

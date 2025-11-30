@@ -2,6 +2,7 @@ package com.sonora.ui.screen;
 
 import com.sonora.ui.region.Region;
 import com.sonora.ui.region.SongsRegion;
+import com.sonora.ui.region.TitleRegion;
 import com.sonora.ui.slot.Slot;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
@@ -12,9 +13,6 @@ import java.util.List;
 
 public class AlbumScreen extends Screen {
     @FXML
-    private Label labelTitle;
-
-    @FXML
     private VBox regionsBox;
 
     public AlbumScreen() {
@@ -23,8 +21,6 @@ public class AlbumScreen extends Screen {
 
     @FXML
     public void initialize() {
-        labelTitle.setText("Album Screen");
-
         this.setRegions();
     }
 
@@ -32,9 +28,13 @@ public class AlbumScreen extends Screen {
     public void setRegions() {
         List<Region<? extends Slot>> regions = new ArrayList<>();
 
+        TitleRegion titleRegion = new TitleRegion();
         SongsRegion songsRegion = new SongsRegion();
 
+        regions.add(titleRegion);
         regions.add(songsRegion);
+
+        regionsBox.getChildren().add(titleRegion.getRoot());
         regionsBox.getChildren().add(songsRegion.getRoot());
     }
 }

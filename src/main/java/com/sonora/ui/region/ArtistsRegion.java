@@ -12,11 +12,6 @@ public class ArtistsRegion extends Region<ArtistSlot> {
         this.setSlots();
     }
 
-    @FXML
-    public void initializeUI() {
-
-    }
-
     @Override
     public void setSlots() {
 

@@ -8,35 +8,34 @@ import javafx.application.Application;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.Node;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
+import javafx.scene.layout.Priority;
 import javafx.stage.Stage;
 
 public class Main extends Application {
-    @FXML private HBox ScreenBox;
-    @FXML private HBox PlayerBarBox;
-    @FXML private HBox SearchBarBox;
-    @FXML private VBox SideBarBox;
+    @FXML private HBox screenBox;
+    @FXML private HBox playerBarBox;
+    @FXML private HBox searchBarBox;
+    @FXML private VBox sideBarBox;
 
     private SearchBar searchBar;
-    private SideBar sideBar;
     private PlayerBar playerBar;
+    private SideBar sideBar;
     private Screen currentScreen;
 
     @Override
     public void start(Stage stage) throws Exception {
-        //setting the main controller
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/ui/Main.fxml"));
         loader.setController(this);
 
-        //setting scene
         Scene scene = new Scene(loader.load());
 
         stage.setScene(scene);
         stage.setTitle("Sonora");
         stage.show();
 
-        //rendering
         renderBars();
         renderScreen(loadAlbumScreen());
     }
@@ -46,8 +45,15 @@ public class Main extends Application {
     }
 
     public void renderScreen(Screen screen) {
-        ScreenBox.getChildren().clear();
-        ScreenBox.getChildren().add(screen.getRoot());
+        screenBox.getChildren().clear();
+
+        Node screenRoot = screen.getRoot();
+
+        HBox.setHgrow(screenRoot, Priority.ALWAYS);
+        screenRoot.maxHeight(Double.MAX_VALUE);
+        screenRoot.maxWidth(Double.MAX_VALUE);
+
+        screenBox.getChildren().add(screenRoot);
         this.currentScreen = screen;
     }
 
@@ -73,16 +79,19 @@ public class Main extends Application {
 
     public void renderBars() {
         this.searchBar = new SearchBar();
-        this.sideBar = new SideBar();
         this.playerBar = new PlayerBar();
+        this.sideBar = new SideBar();
 
-        PlayerBarBox.getChildren().clear();
-        PlayerBarBox.getChildren().add(playerBar.getRoot());
+        searchBarBox.getChildren().clear();
+        playerBarBox.getChildren().clear();
+        sideBarBox.getChildren().clear();
 
-        SearchBarBox.getChildren().clear();
-        SearchBarBox.getChildren().add(searchBar.getRoot());
+        HBox.setHgrow(searchBar.getRoot(), Priority.ALWAYS);
+        searchBarBox.getChildren().add(searchBar.getRoot());
 
-        SideBarBox.getChildren().clear();
-        SideBarBox.getChildren().add(sideBar.getRoot());
+        HBox.setHgrow(playerBar.getRoot(), Priority.ALWAYS);
+        playerBarBox.getChildren().add(playerBar.getRoot());
+
+        sideBarBox.getChildren().add(sideBar.getRoot());
     }
 }
