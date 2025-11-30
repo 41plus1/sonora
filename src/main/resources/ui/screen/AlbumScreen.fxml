@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            prefWidth="600" prefHeight="400">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="400" prefWidth="600" styleClass="outline-box" stylesheets="@../style.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1">
 
     <children>
-        <Label fx:id="labelTitle" layoutX="20" layoutY="20" text=" "/>
+        <Label fx:id="labelTitle" layoutX="311.0" layoutY="50.0" text=" " />
+        <VBox fx:id="regionsBox" layoutX="13.0" layoutY="13.0" prefHeight="426.0" prefWidth="626.0" />
     </children>
 
 </AnchorPane>

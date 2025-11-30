@@ -12,11 +12,11 @@
             <children>
                 <VBox fx:id="SideBarBox" prefHeight="366.0" prefWidth="174.0" styleClass="outline-box" />
 
-                <VBox prefHeight="366.0" prefWidth="461.0" styleClass="outline-box">
+                <VBox prefHeight="366.0" prefWidth="461.0" styleClass="outline-box" HBox.hgrow="ALWAYS">
                     <children>
-                        <HBox fx:id="SearchBarBox" prefHeight="106.0" prefWidth="461.0" />
-                        <HBox fx:id="ScreenBox" prefHeight="224.0" prefWidth="461.0" />
-                        <HBox fx:id="PlayerBarBox" prefHeight="43.0" prefWidth="461.0" />
+                        <HBox fx:id="SearchBarBox" prefHeight="106.0" prefWidth="461.0" VBox.vgrow="ALWAYS" />
+                        <HBox fx:id="ScreenBox" prefHeight="224.0" prefWidth="461.0" VBox.vgrow="ALWAYS" />
+                        <HBox fx:id="PlayerBarBox" prefHeight="43.0" prefWidth="461.0" VBox.vgrow="ALWAYS" />
                     </children>
                 </VBox>
             </children>

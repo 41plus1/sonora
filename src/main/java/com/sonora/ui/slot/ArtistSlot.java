@@ -1,15 +1,15 @@
 package com.sonora.ui.slot;
 
 import com.sonora.model.person.Artist;
+import javafx.fxml.FXML;
 
-public class ArtistSlot extends Slot<Artist> {
-    public ArtistSlot(Artist info) {
-        super(info);
+public class ArtistSlot extends Slot {
+    public ArtistSlot() {
+        super("/ui/slot/ArtistSlot.fxml");
     }
 
-    @Override
+    @FXML
     public void initializeUI() {
 
     }
-
 }

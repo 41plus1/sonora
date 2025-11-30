@@ -38,7 +38,7 @@ public class Main extends Application {
 
         //rendering
         renderBars();
-        renderScreen(loadHomeScreen());
+        renderScreen(loadAlbumScreen());
     }
 
     public static void main(String[] args) {

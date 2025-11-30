@@ -1,10 +1,14 @@
 package com.sonora.ui.screen;
 
+import com.sonora.ui.region.Region;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 
-public class Screen {
+import java.util.List;
+
+public abstract class Screen {
     private Parent root;
+    private List<Region> regions;
 
     public Screen(String path) {
         try {
@@ -18,5 +22,11 @@ public class Screen {
 
     public Parent getRoot() {
         return root;
+    }
+
+    public abstract void setRegions();
+
+    public List<Region> getRegions() {
+        return regions;
     }
 }

@@ -15,4 +15,9 @@ public class ArtistScreen extends Screen {
     public void initialize() {
         labelTitle.setText("Artist Screen");
     }
+
+    @Override
+    public void setRegions() {
+
+    }
 }

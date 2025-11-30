@@ -15,4 +15,9 @@ public class ProfileScreen extends Screen {
     public void initialize() {
         labelTitle.setText("Profile Screen");
     }
+
+    @Override
+    public void setRegions() {
+
+    }
 }

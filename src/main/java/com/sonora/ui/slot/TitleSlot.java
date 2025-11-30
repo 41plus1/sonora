@@ -2,9 +2,9 @@ package com.sonora.ui.slot;
 
 import javafx.fxml.FXML;
 
-public class AlbumSlot extends Slot {
-    public AlbumSlot() {
-        super("/ui/slot/AlbumSlot.fxml");
+public class TitleSlot extends Slot {
+    public TitleSlot() {
+        super("/ui/slot/TitleSlot.fxml");
     }
 
     @FXML

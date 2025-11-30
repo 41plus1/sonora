@@ -1,4 +1,25 @@
 package com.sonora.ui.region;
 
-public class AlbumsRegion {
+import com.sonora.ui.slot.AlbumSlot;
+import com.sonora.ui.slot.Slot;
+import javafx.fxml.FXML;
+
+import java.util.List;
+
+public class AlbumsRegion extends Region<AlbumSlot> {
+    public AlbumsRegion() {
+        super("/ui/region/AlbumsRegion.fxml");
+
+        this.setSlots();
+    }
+
+    @FXML
+    public void initializeUI() {
+
+    }
+
+    @Override
+    public void setSlots() {
+
+    }
 }

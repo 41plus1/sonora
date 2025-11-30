@@ -15,4 +15,9 @@ public class SearchScreen extends Screen {
     public void initialize() {
         labelTitle.setText("Search Screen");
     }
+
+    @Override
+    public void setRegions() {
+
+    }
 }

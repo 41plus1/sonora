@@ -1,15 +1,22 @@
 package com.sonora.ui.slot;
 
-public abstract class Slot <T> {
-    private T info;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
 
-    public Slot(T info) {
-        this.info = info;
+public class Slot {
+    private Parent root;
+
+    public Slot(String path) {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource(path));
+            loader.setController(this);
+            this.root = loader.load();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
-    public T getInfo() {
-        return info;
+    public Parent getRoot() {
+        return root;
     }
-
-    public abstract void initializeUI();
 }

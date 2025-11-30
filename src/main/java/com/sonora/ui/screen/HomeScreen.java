@@ -15,4 +15,9 @@ public class HomeScreen extends Screen {
     public void initialize() {
         labelTitle.setText("Home Screen");
     }
+
+    @Override
+    public void setRegions() {
+
+    }
 }
