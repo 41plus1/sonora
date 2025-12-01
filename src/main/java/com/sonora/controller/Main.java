@@ -37,7 +37,7 @@ public class Main extends Application {
         stage.show();
 
         renderBars();
-        renderScreen(loadAlbumScreen());
+        renderScreen(loadHomeScreen());
     }
 
     public static void main(String[] args) {

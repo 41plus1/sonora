@@ -15,10 +15,7 @@ public class SongsRegion extends Region<SongSlot> {
 
     public SongsRegion() {
         super("/ui/region/SongsRegion.fxml");
-    }
 
-    @FXML
-    public void initialize() {
         this.setSlots();
     }
 

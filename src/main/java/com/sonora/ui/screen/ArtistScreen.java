@@ -9,11 +9,8 @@ public class ArtistScreen extends Screen {
 
     public ArtistScreen() {
         super("/ui/screen/ArtistScreen.fxml");
-    }
 
-    @FXML
-    public void initialize() {
-        labelTitle.setText("Artist Screen");
+        this.setRegions();
     }
 
     @Override

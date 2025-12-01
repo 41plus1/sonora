@@ -14,13 +14,7 @@ public class TitleSlot extends Slot {
     @FXML
     private Label labelOtherInfos;
 
-
     public TitleSlot() {
         super("/ui/slot/TitleSlot.fxml");
-    }
-
-    @FXML
-    public void initializeUI() {
-
     }
 }

@@ -17,10 +17,7 @@ public class AlbumScreen extends Screen {
 
     public AlbumScreen() {
         super("/ui/screen/AlbumScreen.fxml");
-    }
 
-    @FXML
-    public void initialize() {
         this.setRegions();
     }
 

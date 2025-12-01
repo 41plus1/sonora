@@ -7,8 +7,4 @@ public class AlbumSlot extends Slot {
         super("/ui/slot/AlbumSlot.fxml");
     }
 
-    @FXML
-    public void initializeUI() {
-
-    }
 }

@@ -9,11 +9,8 @@ public class ProfileScreen extends Screen {
 
     public ProfileScreen() {
         super("/ui/screen/ProfileScreen.fxml");
-    }
 
-    @FXML
-    public void initialize() {
-        labelTitle.setText("Profile Screen");
+        this.setRegions();
     }
 
     @Override

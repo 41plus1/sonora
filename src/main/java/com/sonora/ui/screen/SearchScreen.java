@@ -9,11 +9,8 @@ public class SearchScreen extends Screen {
 
     public SearchScreen() {
         super("/ui/screen/SearchScreen.fxml");
-    }
 
-    @FXML
-    public void initialize() {
-        labelTitle.setText("Search Screen");
+        this.setRegions();
     }
 
     @Override
