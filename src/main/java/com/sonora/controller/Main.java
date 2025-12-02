@@ -18,7 +18,6 @@ import javafx.scene.layout.Priority;
 import javafx.stage.Stage;
 
 import java.util.Map;
-import java.util.ArrayList;
 
 public class Main extends Application {
     interface ScreenFactory {
