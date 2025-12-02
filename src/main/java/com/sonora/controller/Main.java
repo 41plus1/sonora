@@ -1,5 +1,8 @@
 package com.sonora.controller;
 
+import com.sonora.dao.json.JsonMusic;
+import com.sonora.model.media.Music;
+import com.sonora.model.person.Artist;
 import com.sonora.ui.bar.PlayerBar;
 import com.sonora.ui.bar.SearchBar;
 import com.sonora.ui.bar.SideBar;
@@ -15,7 +18,7 @@ import javafx.scene.layout.Priority;
 import javafx.stage.Stage;
 
 import java.util.Map;
-import java.util.function.Function;
+import java.util.ArrayList;
 
 public class Main extends Application {
     interface ScreenFactory {
