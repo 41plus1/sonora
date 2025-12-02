@@ -16,10 +16,28 @@ import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.scene.layout.Priority;
 import javafx.stage.Stage;
-
+import java.util.Map;
 import java.util.ArrayList;
 
 public class Main extends Application {
+    interface ScreenFactory {
+        Screen create(Object... args);
+    }
+
+    private final Map<String, ScreenFactory> screenFactories = Map.of(
+            "home",   args -> new HomeScreen(),
+            "search", args -> new SearchScreen(),
+
+            "album",  args -> new AlbumScreen(),
+            "playlist",  args -> new PlaylistScreen(),
+
+            "artist", args -> new ArtistScreen(),
+            "user",   args -> new UserScreen()
+
+            //with arguments:
+            //new AlbumScreen((int) args[0], (String) args[1]),
+    );
+
     @FXML private HBox screenBox;
     @FXML private HBox playerBarBox;
     @FXML private HBox searchBarBox;
@@ -42,7 +60,7 @@ public class Main extends Application {
         stage.show();
 
         renderBars();
-        renderScreen(loadAlbumScreen());
+        renderScreen(loadScreen("home"));
     }
 
     public static void main(String[] args) {
@@ -62,24 +80,12 @@ public class Main extends Application {
         this.currentScreen = screen;
     }
 
-    public AlbumScreen loadAlbumScreen() {
-        return new AlbumScreen();
-    }
+    public Screen loadScreen(String type, Object... args) {
+        ScreenFactory factory = screenFactories.get(type);
 
-    public ArtistScreen loadArtistScreen() {
-        return new ArtistScreen();
-    }
+        if (factory == null) { throw new IllegalArgumentException("Invalid type: " + type); }
 
-    public ProfileScreen loadProfileScreen() {
-        return new ProfileScreen();
-    }
-
-    public HomeScreen loadHomeScreen() {
-        return new HomeScreen();
-    }
-
-    public SearchScreen loadSearchScreen() {
-        return new SearchScreen();
+        return factory.create(args);
     }
 
     public void renderBars() {
@@ -87,15 +93,20 @@ public class Main extends Application {
         this.playerBar = new PlayerBar();
         this.sideBar = new SideBar();
 
+        //search
         searchBarBox.getChildren().clear();
-        playerBarBox.getChildren().clear();
-        sideBarBox.getChildren().clear();
 
         HBox.setHgrow(searchBar.getRoot(), Priority.ALWAYS);
         searchBarBox.getChildren().add(searchBar.getRoot());
 
+        //player bar
+        playerBarBox.getChildren().clear();
+
         HBox.setHgrow(playerBar.getRoot(), Priority.ALWAYS);
         playerBarBox.getChildren().add(playerBar.getRoot());
+
+        //sidebar
+        sideBarBox.getChildren().clear();
 
         sideBarBox.getChildren().add(sideBar.getRoot());
     }

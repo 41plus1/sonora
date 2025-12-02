@@ -3,12 +3,12 @@ package com.sonora.ui.screen;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 
-public class ArtistScreen extends Screen {
+public class UserScreen extends Screen {
     @FXML
     private Label labelTitle;
 
-    public ArtistScreen() {
-        super("/ui/screen/ArtistScreen.fxml");
+    public UserScreen() {
+        super("/ui/screen/UserScreen.fxml");
 
         this.setRegions();
     }

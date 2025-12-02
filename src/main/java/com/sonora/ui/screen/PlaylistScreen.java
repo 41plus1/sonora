@@ -5,18 +5,17 @@ import com.sonora.ui.region.SongsRegion;
 import com.sonora.ui.region.TitleRegion;
 import com.sonora.ui.slot.Slot;
 import javafx.fxml.FXML;
-import javafx.scene.control.Label;
 import javafx.scene.layout.VBox;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class AlbumScreen extends Screen {
+public class PlaylistScreen extends Screen {
     @FXML
     private VBox regionsBox;
 
-    public AlbumScreen() {
-        super("/ui/screen/AlbumScreen.fxml");
+    public PlaylistScreen() {
+        super("/ui/screen/PlaylistScreen.fxml");
 
         this.setRegions();
     }

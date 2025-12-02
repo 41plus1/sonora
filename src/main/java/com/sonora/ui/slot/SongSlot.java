@@ -16,10 +16,11 @@ public class SongSlot extends Slot {
 
     public SongSlot() {
         super("/ui/slot/SongSlot.fxml");
+
+        this.setInfos("Song name");
     }
 
-    @FXML
-    public void initializeUI() {
-        songName.setText("Songggg nameee");
+    public void setInfos(String name) {
+        songName.setText(name);
     }
 }

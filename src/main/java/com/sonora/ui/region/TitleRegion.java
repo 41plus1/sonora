@@ -16,10 +16,7 @@ public class TitleRegion extends Region<TitleSlot> {
 
     public TitleRegion() {
         super("/ui/region/TitleRegion.fxml");
-    }
 
-    @FXML
-    public void initialize() {
         this.setSlots();
     }
 
