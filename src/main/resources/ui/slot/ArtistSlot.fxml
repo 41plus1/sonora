@@ -11,7 +11,7 @@
       <VBox layoutX="19.0" layoutY="19.0" prefHeight="138.0" prefWidth="74.0">
          <children>
             <ImageView fx:id="artistPhoto" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true" VBox.vgrow="ALWAYS" />
-            <Label fx:id="artistName" prefHeight="38.0" prefWidth="101.0" text="ArtistName" VBox.vgrow="ALWAYS" />
+            <Label fx:id="artistName" prefHeight="38.0" prefWidth="101.0" text="Artist Name" VBox.vgrow="ALWAYS" />
          </children>
       </VBox>
    </children>

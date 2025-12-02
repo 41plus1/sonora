@@ -1,6 +1,6 @@
 package com.sonora.ui.region;
 
-import com.sonora.ui.slot.AlbumSlot;
+import com.sonora.ui.slot.PlaylistSlot;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.layout.HBox;
@@ -8,17 +8,17 @@ import javafx.scene.layout.HBox;
 import java.util.ArrayList;
 import java.util.List;
 
-public class AlbumsRegion extends Region<AlbumSlot> {
+public class PlaylistsRegion extends Region<PlaylistSlot> {
     @FXML
-    private HBox albumsBox;
+    private HBox playlistsBox;
     @FXML
     private Label labelName;
 
-    private List<AlbumSlot> slots;
+    private List<PlaylistSlot> slots;
     private String regionName;
 
-    public AlbumsRegion(String regionName) {
-        super("/ui/region/AlbumsRegion.fxml");
+    public PlaylistsRegion(String regionName) {
+        super("/ui/region/PlaylistsRegion.fxml");
 
         this.setInfos(regionName);
         this.setSlots();
@@ -26,13 +26,13 @@ public class AlbumsRegion extends Region<AlbumSlot> {
 
     @Override
     public void setSlots() {
-        this.slots = new ArrayList<AlbumSlot>();
+        this.slots = new ArrayList<PlaylistSlot>();
 
         for (int i = 0; i < 20; i++) {
-            AlbumSlot albumSlot = new AlbumSlot();
+            PlaylistSlot playlistSlot = new PlaylistSlot();
 
-            this.slots.add(albumSlot);
-            albumsBox.getChildren().add(albumSlot.getRoot());
+            this.slots.add(playlistSlot);
+            playlistsBox.getChildren().add(playlistSlot.getRoot());
         }
     }
 

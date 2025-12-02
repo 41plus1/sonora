@@ -9,14 +9,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ArtistsRegion extends Region<ArtistSlot> {
-    private List<ArtistSlot> slots;
-    private String regionName;
-
     @FXML
     private HBox artistsBox;
-
     @FXML
     private Label labelName;
+
+    private List<ArtistSlot> slots;
+    private String regionName;
 
     public ArtistsRegion(String regionName) {
         super("/ui/region/ArtistsRegion.fxml");
