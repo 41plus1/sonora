@@ -9,6 +9,7 @@ import java.io.*;
 import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 public class JsonMusic implements Repository<Music> {
     private static final String JSON_PATH = "src/main/resources/data/musics.json";
@@ -45,5 +46,21 @@ public class JsonMusic implements Repository<Music> {
     public void save(Music music) {
         this.cache.add(music);
         saveToFile();
+    }
+
+    @Override
+    public void delete(int id) {
+        this.cache.removeIf(music -> music.getId() == id);
+        saveToFile();
+    }
+
+    @Override
+    public Optional<Music> findById(int id) {
+        return cache.stream().filter(music -> music.getId() == id).findFirst();
+    }
+
+    @Override
+    public List<Music> findAll() {
+        return cache;
     }
 }
